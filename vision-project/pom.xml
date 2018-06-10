@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.axonactive.coolstuff</groupId>
+  <artifactId>vision-project</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+ 	 <plugins>
+  		<plugin>
+			<groupId>com.axonactive.coolstuff</groupId>
+			<artifactId>mavenizer</artifactId>
+			<version>1.0</version>
+        		  <executions>
+	          <execution>
+	          	<id>logging</id>
+	            <phase>test</phase>
+	            <goals>
+	              <goal>log-mavenizer</goal>
+	            </goals>
+	          </execution>
+	          <execution>
+	          	<id>building</id>
+	          	<phase>package</phase>
+	          	<goals>
+	          		<goal>build-mavenizer</goal>
+	          	</goals>
+	          </execution>
+        		</executions>
+        </plugin>
+  	</plugins>
+  </build>
+</project>
